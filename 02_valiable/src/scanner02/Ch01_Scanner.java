@@ -64,8 +64,8 @@ public class Ch01_Scanner {
 		double wid = 13.5;
 		double len = 41.7;
 		
-		System.out.println("면적 ="+(wid*len));
-		System.out.println("둘레 ="+(wid+len)*2);
+		System.out.println("면적 = "+(wid*len));
+		System.out.println("둘레 = "+(wid+len)*2);
 		
 	}
 

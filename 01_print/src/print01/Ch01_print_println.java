@@ -8,6 +8,10 @@ public class Ch01_print_println {
 		 할줄 주석 ctrl + / (토글)
 		 여러줄 주석 ctrl + shift + / 
 		 여러줄 주석 해제 ctrl + shift + \
+		 
+		 줄정리 ctrl + shift +f5
+		 
+		 
 		 ln => 라인 줄 바꿈
 		*/
 		
