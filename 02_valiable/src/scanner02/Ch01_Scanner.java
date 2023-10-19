@@ -36,7 +36,7 @@ public class Ch01_Scanner {
 		String gender = "여자";
 		int age = 28;
 		double high = 158.5; */
-		System.out.print("이름 : ");
+		/*System.out.print("이름 : ");
 		String name = scan.next();
 		System.out.print("성별 : ");
 		String gender = scan.next();
@@ -45,7 +45,7 @@ public class Ch01_Scanner {
 		System.out.print("키 : ");
 		double high = scan.nextDouble();
 		
-		System.out.println("키 "+high+"cm인 "+age+"살 "+gender+" "+name+"님 반갑습니다.");
+		System.out.println("키 "+high+"cm인 "+age+"살 "+gender+" "+name+"님 반갑습니다.");*/
 		
 		System.out.println("--------------------------------------------------------------");
 		System.out.println("2번.");
@@ -67,6 +67,16 @@ public class Ch01_Scanner {
 		System.out.println("면적 = "+(wid*len));
 		System.out.println("둘레 = "+(wid+len)*2);
 		
+		
+		System.out.println("--------------------------------------------------------------");
+		System.out.println("4번.");
+		System.out.print("성별은 남자입니까?(남 or 여) : ");
+		/*
+		String sex1 = scan.next();
+		char sex2 = sex1.charAt(0);
+		*/
+		char sex = scan.next().charAt(0); //nextChar 없음
+		System.out.println(sex);
 	}
 
 }
