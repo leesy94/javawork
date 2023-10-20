@@ -9,7 +9,7 @@ public class Ch03_castingOP {
 		byte b2 = 20;
 
 		byte sum = (byte) (b1 + b2);
-		int sum2 = b1 + b2;
+		int sum2 = b1 + b2; // int보다 작은 자료형은 int로 자동형변환됨
 
 		char c1 = 'a';
 		char c2 = (char) (c1 + 1); // b 출력
