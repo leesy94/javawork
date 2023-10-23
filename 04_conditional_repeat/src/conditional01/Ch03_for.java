@@ -20,7 +20,6 @@ public class Ch03_for {
 			
 		}
 		
-		
 		System.out.println("---------------------------------");
 		System.out.println("1번.");
 		
