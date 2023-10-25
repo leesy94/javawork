@@ -2,16 +2,16 @@ package string01;
 
 import java.util.Arrays;
 
-public class Ch03_multiArray {
+public class Ch03_multiArray { // 클래스
 
-	public static void main(String[] args) { //2차원 배열
-		int arr[][] = new int[2][3];
+	public static void main(String[] args) { //2차원 배열 // 메서드
+		int arr[][] = new int[2][3]; //속성
 		int[][] score = {{1,5,6},{33,2,7}}; // 2행에 3열
 		
 		System.out.println(score[1][2]);
 		
-		System.out.println("score의 행 길기 : " + score.length);
-		System.out.println("score의 열 길기 : " + score[0].length);
+		System.out.println("score의 행 길기 : " + score.length); //2
+		System.out.println("score의 열 길기 : " + score[0].length); //3
 		
 		for(int i = 0 ; i < score.length;i++) {
 			for(int j = 0 ; j < score[i].length;j++) {

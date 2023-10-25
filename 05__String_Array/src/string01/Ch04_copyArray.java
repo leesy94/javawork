@@ -57,6 +57,7 @@ public class Ch04_copyArray {
 		*/
 		
 		int num ;
+		//int sum3 ;
 		//System.out.println(num);
 		do {
 			System.out.print("숫자 : ");
@@ -65,22 +66,23 @@ public class Ch04_copyArray {
 			if(num < 3) {
 				System.out.println("다시 입력해주세요.");		
 			}else {
-				int sum = num*2 - 1  ;
+				int sum3 = num*2 - 1  ;
 				//System.out.println(sum);
-				int[] arr2 = new int[sum]; 
+				int[] arr2 = new int[sum3]; 
 			
 				for(int a= 0 ;a < num ; a++ ) {
 					arr2[a] = a+1;
 				}
-				for(int a = (sum+1)/2 ; a < sum ; a++ ) {
+				for(int a = (sum3+1)/2 ; a < sum ; a++ ) {
 					//System.out.println(num);
+					if(num > 0) 
 					arr2[a] = --num;
 				}
 				System.out.println(Arrays.toString(arr2));
 				break;
 			}
 			
-		}while(num < 3);
+		}while(num > 0);
 		
 		System.out.println("===============================================");
 		System.out.println("3번.");
@@ -95,10 +97,25 @@ public class Ch04_copyArray {
 		System.out.print("먹고싶은 치킨 종류 : ");
 		String ans = scan.next();
 		
-		if(ans.equals(ck)) {
+		/*if(ans.equals(ck)) {
 			System.out.println(ans+"치킨이 있습니다.");
 		}else {
 			System.out.println(ans+"치킨이 없습니다. 다시 골라주세요.");
+		}*/
+		
+		boolean found = false;
+
+		for (String chicken : ck) {
+		    if (ans.equals(chicken)) {
+		        found = true;
+		        break;
+		    }
+		}
+
+		if (found) {
+		    System.out.println(ans + " 치킨이 있습니다.");
+		} else {
+		    System.out.println(ans + " 치킨이 없습니다. 다시 골라주세요.");
 		}
 		
 		System.out.println("===============================================");
@@ -115,14 +132,23 @@ public class Ch04_copyArray {
 		System.out.print("주민번호(-포함) : ");
 		String sn = scan.next();
 		char[] sArr = sn.toCharArray();
-		String[] sArr2 = new String[13];
+		//String[] sArr = sn.toArray();
+		char[] sArr2 = new char[sArr.length];
 		
 		//System.arraycopy(sArr, 6, sArr2, 5 , 6);
-		for(int i = 6 ; i < 13 ; i++) {
+		/*for(int i = 6 ; i < 13 ; i++) {
 			sArr[i] = '*';
+		}*/
+		for(int i = 0 ; i < sArr.length ; i ++) {
+			if(i < 8) {
+				//sArr2[i] = sArr.charAt(i);
+				sArr2[i] = sArr[i];
+			}else {
+				sArr2[i] = '*';
+			}
 		}
 		
-		System.out.println(Arrays.toString(sArr));
+		System.out.println(Arrays.toString(sArr2));
 		
 		
 		System.out.println("===============================================");
@@ -135,6 +161,7 @@ public class Ch04_copyArray {
 		System.out.println("-----------------------------------------");
 		
 		int[] scorearr = new int[3];
+		int[] scores = null ;
 		
 		while(run) {
 			
@@ -146,9 +173,9 @@ public class Ch04_copyArray {
 			if(selno == 1) {
 				System.out.print("학생수 : ");
 				int stunum = scan.nextInt();
-				
+				scores = new int[stunum];
 			} else if(selno == 2) {
-				System.out.print("점수입력 1 : ");
+				/*System.out.print("점수입력 1 : ");
 				int scorenum1 = scan.nextInt();
 				System.out.print("점수입력 2 : ");
 				int scorenum2 = scan.nextInt();
@@ -159,32 +186,54 @@ public class Ch04_copyArray {
 				scorearr[1] = scorenum2;
 				scorearr[2] = scorenum3;
 				
-				System.out.println(scorenum1);
+				System.out.println(scorenum1);*/
+				
+				for(int i = 0; i < scores.length ;i++) {
+					System.out.print("점수 "+(i+1)+" : ");
+					//int scorenum1 = scan.nextInt();
+					scores[i] = scan.nextInt();
+				}
 				
 			} else if(selno == 3) {
 				
-				int max =  scorearr[0];
+				/*int max =  scorearr[0];
 				double avg = 0.0;
-				int sum = 0;
+				int sum2 = 0;
 				
 				for(int i = 1; i<scorearr.length; i++) {
 					if(max < scorearr[i]) {
 						max = scorearr[i];
 					}
-					sum += scorearr[i]; 
+					sum2 += scorearr[i]; 
 				}
 				
-				avg = sum / scorearr.length;
+				avg = sum2 / scorearr.length;
 							
 				
 				System.out.println("최고점수 : "+max);
-				System.out.println("평균점슈 : "+avg);
+				System.out.println("평균점슈 : "+avg);*/
+				
+				/////강사님 풀이
+				int max = 0;
+				int sum2 = 0 ;
+				double avg = 0 ;
+				for(int i = 0; i < scores.length ;i++) {
+					/*max = scores[i];
+					if(max < scores[i]) {
+						max = scores[i];
+					}*/
+					max = max < scores[i] ? scores[i] : max ;
+					sum2 += scores[i]; 
+					
+				}
+				avg = sum / scores.length ;
+				System.out.println("최고점수 : "+max);
+				System.out.printf("평균점슈 : %.2f" , avg);
 				
 				
 			} else if(selno == 4) {
 				run = false;
 			}
-			
 			
 		}
 		System.out.println("프로그램 종료!");
