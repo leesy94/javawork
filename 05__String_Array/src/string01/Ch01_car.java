@@ -1,4 +1,4 @@
-package obj02_filed;
+package string01;
 
 public class Ch01_car {
 	public String com = "기아";
