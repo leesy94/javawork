@@ -10,6 +10,7 @@ class over {
 }
 class riding extends over {
 	//오바라이딩
+	@Override //오버라이드 할때 써주면 좋음
 	void show() {
 		System.out.println("자식클래스 show 메소드 호출 냥냥뇽뇽");
 	}
