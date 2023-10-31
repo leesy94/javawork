@@ -5,7 +5,7 @@ class Singleton{
 	//생성자에 private를 붙여 객체를 생성 할 수 없게 , private가 붙으면 getter setter
 	//싱글톤 : 전체 프로그램에서 단 하나의 객체만 만들도록 보장하는 기법
 	//		 실행클래스에서 객체를 만들지 못하도록 해야 함 
-	private Singleton() {} 
+	Singleton() {} 
 	
 	//private static Singleton singleton2 ;
 	
