@@ -1,4 +1,4 @@
-package ex01;
+package ex01_Exception;
 
 public class Ch02_NullPointException {
 
