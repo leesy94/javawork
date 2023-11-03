@@ -29,7 +29,7 @@ public class Ch04_map {
 		System.out.println(map2);
 		map2.clear();
 		System.out.println(map2);
-		
+		//////////////////////////////////////
 		mapPrint(map);
 	}
 
