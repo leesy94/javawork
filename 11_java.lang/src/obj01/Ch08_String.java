@@ -47,6 +47,16 @@ public class Ch08_String {
 		//str9 = str10.replaceAll(str9.substring(8),"*");
 		
 		System.out.println(str10);
+		
+		//////////////////////////////
+		//trim() : 공백체크
+		String stTrim = "                lee";
+		String stTrim2 = "sy                lee";
+		System.out.println(stTrim + stTrim2);
+		
+		System.out.println(stTrim.trim());
+		System.out.println(stTrim2.trim());
+		
 	}
 
 }

@@ -13,10 +13,10 @@ class Card {
 		this.kind = kind;
 		this.num = num;
 	}
-	/*@Override
+	@Override
 	public String toString() { //tostring 나오면 이걸로 리턴
 		return "kind : " + kind + " , num : "+num ;
-	}*/
+	}
 }
 
 public class Ch04_ToString {
