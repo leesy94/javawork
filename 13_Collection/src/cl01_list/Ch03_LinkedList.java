@@ -1,5 +1,6 @@
 package cl01_list;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Ch03_LinkedList {
@@ -21,6 +22,12 @@ public class Ch03_LinkedList {
 		
 		for(int i : list) {
 			System.out.println(i);
+		}
+		Iterator itr = list.iterator();
+		
+		while(itr.hasNext()) {
+			Object element = itr.next();
+			System.out.print(element + " : ");
 		}
 		
 	}

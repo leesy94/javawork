@@ -82,7 +82,7 @@ class Member {
 	
 }
 
-public class Ch02_set {
+public class Ch02_HashSet {
 
 	public static void main(String[] args) {
 		Member m = new Member("ddd",24,"wefewrw","werewrewrw");

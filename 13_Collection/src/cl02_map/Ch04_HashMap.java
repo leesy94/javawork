@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-public class Ch04_map {
+public class Ch04_HashMap {
 
 	public static void main(String[] args) {
 		//키 중복 불가, 값으 가능

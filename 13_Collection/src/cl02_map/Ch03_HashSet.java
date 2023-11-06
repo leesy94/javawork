@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.*;
 
 
-public class Ch03_Set {
+public class Ch03_HashSet {
 
 	public static void main(String[] args) {
 

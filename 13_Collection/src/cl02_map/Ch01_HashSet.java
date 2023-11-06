@@ -2,7 +2,7 @@ package cl02_map;
 
 import java.util.* ;
 
-public class Ch01_Set {
+public class Ch01_HashSet {
 
 	public static void main(String[] args) {
 		Object[] oArr = {"1","3","5","7","11","11","11","11","11"}; 
